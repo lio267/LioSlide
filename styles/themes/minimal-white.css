@@ -1,0 +1,182 @@
+/* Minimal White Theme - Elegant Simplicity, Maximum Clarity */
+
+/* Web Fonts Import */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  /* Typography - Clean Sans-serif for Minimalism */
+  --font-family-display: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-weight-display: 600;
+  --font-family-content: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 16px;
+  --line-height-content: 1.7;
+
+  /* Surface Colors - Subtle warmth */
+  --color-surface: #ffffff;
+  --color-surface-foreground: #171717;
+
+  /* Primary Colors - Refined Black */
+  --color-primary: #171717;
+  --color-primary-light: #404040;
+  --color-primary-dark: #0a0a0a;
+  --color-primary-foreground: #fafafa;
+
+  /* Secondary Colors - Warm Gray */
+  --color-secondary: #fafafa;
+  --color-secondary-foreground: #171717;
+
+  /* Utility Colors */
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #737373;
+  --color-accent: #171717;
+  --color-accent-foreground: #ffffff;
+  --color-border: #e5e5e5;
+
+  /* Spacing - Generous whitespace */
+  --spacing: 0.25rem;
+  --gap: 2rem;
+  --radius: 0px;
+
+  /* Minimal shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-md: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-content);
+  font-weight: var(--font-weight-content);
+  font-size: var(--font-size-content);
+  line-height: var(--line-height-content);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-display);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Layout Utilities */
+.row { display: flex; flex-direction: row; }
+.col { display: flex; flex-direction: column; }
+.center { align-items: center; justify-content: center; }
+.fit { flex: 0 0 auto; }
+.fill-width { flex: 1 1 auto; }
+.fill-height { flex: 1 1 auto; }
+
+/* Gap Utilities */
+.gap-sm { gap: 1rem; }
+.gap-md { gap: 1.5rem; }
+.gap-lg { gap: 2rem; }
+.gap-xl { gap: 3rem; }
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-surface { background-color: var(--color-surface); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-muted { background-color: var(--color-muted); }
+
+/* Text Sizes - Refined scale */
+.text-sm { font-size: 13px; letter-spacing: 0; }
+.text-base { font-size: 16px; }
+.text-lg { font-size: 18px; }
+.text-xl { font-size: 20px; }
+.text-2xl { font-size: 24px; }
+.text-3xl { font-size: 32px; letter-spacing: -0.02em; }
+.text-4xl { font-size: 40px; letter-spacing: -0.02em; }
+.text-5xl { font-size: 56px; letter-spacing: -0.03em; }
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Placeholder - Minimal chart area */
+.placeholder {
+  background-color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-foreground);
+  font-size: 13px;
+  position: relative;
+}
+
+.placeholder::after {
+  content: 'Chart Area';
+  font-size: 13px;
+  color: var(--color-muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* List styling - Minimal bullet */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: '\2014';
+  color: var(--color-muted-foreground);
+  display: inline-block;
+  width: 2em;
+  margin-left: -2em;
+}
+
+ul li {
+  padding-left: 2em;
+  position: relative;
+}
+
+/* Minimal accent line */
+.accent-bar {
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+/* Card-like content blocks - borderless */
+.content-card {
+  background: var(--color-surface);
+  padding: 32px;
+}
+
+/* Quote styling - elegant simplicity */
+blockquote {
+  border-left: 2px solid var(--color-border);
+  padding-left: 32px;
+  margin: 0;
+  font-style: normal;
+  color: var(--color-muted-foreground);
+}
+
+/* Subtle divider */
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 24px 0;
+}
+
+/* Hover states for interactive elements */
+a, button {
+  transition: opacity 0.2s ease;
+}
+
+a:hover, button:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,34 @@
+{
+  "id": "creative-yellow",
+  "name": "Creative Yellow",
+  "nameKo": "크리에이티브 옐로우",
+  "description": "Vibrant yellow theme for creative presentations",
+  "descriptionKo": "창의적인 발표를 위한 생동감 있는 옐로우 테마",
+  "tags": ["크리에이티브", "활기찬", "마케팅"],
+  "category": "creative",
+  "colors": {
+    "primary": "#F59E0B",
+    "primaryDark": "#D97706",
+    "secondary": "#FCD34D",
+    "accent": "#FF6B35",
+    "background": "#FFFBEB",
+    "backgroundAlt": "#FEF3C7",
+    "text": "#1C1917",
+    "textSecondary": "#57534E",
+    "textLight": "#A16207"
+  },
+  "fonts": {
+    "heading": "Pretendard",
+    "body": "Pretendard"
+  },
+  "spacing": {
+    "margin": 0.5,
+    "padding": 0.3,
+    "gap": 0.2
+  },
+  "preview": {
+    "gradient": "from-amber-400 via-yellow-400 to-orange-400",
+    "accentColor": "#FF6B35",
+    "style": "creative"
+  }
+}

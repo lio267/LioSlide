@@ -1,0 +1,36 @@
+/* Soft Gradient Theme - Pastel colors, Gentle gradients, Calming */
+:root {
+  /* Typography */
+  --font-family-display: Trebuchet MS, sans-serif;
+  --font-weight-display: 700;
+  --font-family-content: Arial, sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 16px;
+  --line-height-content: 1.5;
+
+  /* Surface Colors */
+  --color-surface: #fdf4ff;
+  --color-surface-foreground: #3b0764;
+
+  /* Primary Colors - Soft Purple */
+  --color-primary: #a855f7;
+  --color-primary-light: #c084fc;
+  --color-primary-dark: #9333ea;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary Colors */
+  --color-secondary: #f5f3ff;
+  --color-secondary-foreground: #5b21b6;
+
+  /* Utility Colors */
+  --color-muted: #faf5ff;
+  --color-muted-foreground: #7c3aed;
+  --color-accent: #ec4899;
+  --color-accent-foreground: #ffffff;
+  --color-border: #e9d5ff;
+
+  /* Spacing */
+  --spacing: 0.25rem;
+  --gap: 1rem;
+  --radius: 16px;
+}

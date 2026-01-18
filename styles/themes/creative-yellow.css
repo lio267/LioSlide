@@ -1,0 +1,36 @@
+/* Creative Yellow Theme - Bright, Energetic, Optimistic */
+:root {
+  /* Typography - 활기차고 친근한 느낌 */
+  --font-family-display: "Poppins", "Pretendard", sans-serif;
+  --font-weight-display: 700;
+  --font-family-content: "Pretendard", "Noto Sans KR", sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 16px;
+  --line-height-content: 1.6;
+
+  /* Surface Colors */
+  --color-surface: #fffbeb;
+  --color-surface-foreground: #1c1917;
+
+  /* Primary Colors - Vibrant Amber */
+  --color-primary: #f59e0b;
+  --color-primary-light: #fcd34d;
+  --color-primary-dark: #d97706;
+  --color-primary-foreground: #1c1917;
+
+  /* Secondary Colors */
+  --color-secondary: #fef3c7;
+  --color-secondary-foreground: #1c1917;
+
+  /* Utility Colors */
+  --color-muted: #fef9e7;
+  --color-muted-foreground: #57534e;
+  --color-accent: #ff6b35;
+  --color-accent-foreground: #ffffff;
+  --color-border: #fcd34d;
+
+  /* Spacing - 넉넉한 여백으로 시원한 느낌 */
+  --spacing: 0.3rem;
+  --gap: 1.25rem;
+  --radius: 16px;
+}

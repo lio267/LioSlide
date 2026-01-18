@@ -1,0 +1,36 @@
+/* Modern Teal Theme - Fresh, Contemporary, Tech-forward */
+:root {
+  /* Typography */
+  --font-family-display: Arial, sans-serif;
+  --font-weight-display: 700;
+  --font-family-content: Verdana, sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 15px;
+  --line-height-content: 1.5;
+
+  /* Surface Colors */
+  --color-surface: #f0fdfa;
+  --color-surface-foreground: #134e4a;
+
+  /* Primary Colors - Modern Teal */
+  --color-primary: #14b8a6;
+  --color-primary-light: #2dd4bf;
+  --color-primary-dark: #0d9488;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary Colors */
+  --color-secondary: #ccfbf1;
+  --color-secondary-foreground: #115e59;
+
+  /* Utility Colors */
+  --color-muted: #e6fffa;
+  --color-muted-foreground: #0f766e;
+  --color-accent: #f43f5e;
+  --color-accent-foreground: #ffffff;
+  --color-border: #99f6e4;
+
+  /* Spacing */
+  --spacing: 0.25rem;
+  --gap: 1rem;
+  --radius: 8px;
+}

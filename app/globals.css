@@ -1,0 +1,532 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 241, 245, 249;
+}
+
+.dark {
+  --foreground-rgb: 248, 250, 252;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 30, 41, 59;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Progress bar animation */
+@keyframes progress-shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.progress-bar {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: progress-shine 2s infinite;
+}
+
+/* Input focus styles */
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border transition-all duration-200;
+  @apply bg-white dark:bg-slate-800;
+  @apply border-slate-300 dark:border-slate-600;
+  @apply text-slate-900 dark:text-slate-100;
+  @apply placeholder-slate-400 dark:placeholder-slate-500;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+.input-label {
+  @apply block text-sm font-medium mb-2;
+  @apply text-slate-700 dark:text-slate-300;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  @apply bg-primary-600 hover:bg-primary-700;
+  @apply text-white;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  @apply dark:focus:ring-offset-slate-900;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600;
+  @apply text-slate-800 dark:text-slate-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+  @apply dark:focus:ring-offset-slate-900;
+}
+
+/* Shine animation for progress bar */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shine {
+  animation: shine 1.5s ease-in-out infinite;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-primary-600 to-primary-400;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(12px)) {
+  .backdrop-blur-support {
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Category filter buttons */
+.category-btn {
+  @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-200;
+  @apply border-2 border-transparent;
+}
+
+.category-btn-active {
+  @apply bg-primary-600 text-white;
+}
+
+.category-btn-inactive {
+  @apply bg-slate-100 dark:bg-slate-800;
+  @apply text-slate-600 dark:text-slate-400;
+  @apply hover:bg-slate-200 dark:hover:bg-slate-700;
+}
+
+/* ==========================================
+   슬라이드 에디터 스타일
+   ========================================== */
+
+/* 커스텀 스크롤바 (썸네일 패널용) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* 애니메이션 키프레임 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes slide-up-fade {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 애니메이션 유틸리티 클래스 */
+.animate-in {
+  animation-duration: 200ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+.fade-out {
+  animation-name: fade-out;
+}
+
+.slide-in-from-top-2 {
+  animation-name: slide-in-from-top;
+}
+
+.slide-in-from-bottom-2 {
+  animation-name: slide-in-from-bottom;
+}
+
+.slide-in-from-left-2 {
+  animation-name: slide-in-from-left;
+}
+
+.slide-in-from-right-2 {
+  animation-name: slide-in-from-right;
+}
+
+.zoom-in-95 {
+  animation-name: zoom-in;
+}
+
+.zoom-out-95 {
+  animation-name: zoom-out;
+}
+
+.duration-150 {
+  animation-duration: 150ms;
+}
+
+.duration-200 {
+  animation-duration: 200ms;
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+/* 썸네일 드래그 효과 */
+.thumbnail-drag-over {
+  @apply ring-2 ring-primary-500 ring-offset-2;
+}
+
+.thumbnail-dragging {
+  @apply opacity-50 scale-95;
+}
+
+/* 슬라이드 캔버스 그림자 효과 */
+.slide-canvas {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* 테마 전환 애니메이션 */
+.theme-transition {
+  transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+}
+
+/* 버튼 호버 효과 */
+.btn-hover-lift {
+  @apply transition-all duration-200;
+}
+
+.btn-hover-lift:hover {
+  @apply -translate-y-0.5 shadow-lg;
+}
+
+.btn-hover-lift:active {
+  @apply translate-y-0 shadow-md;
+}
+
+/* 편집 포커스 효과 */
+.edit-focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown-menu {
+  @apply bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700;
+}
+
+/* 입력 필드 편집 모드 */
+.input-editing {
+  @apply bg-yellow-50 dark:bg-yellow-900/30 border-2 border-blue-500;
+}
+
+/* 액션 바 그라디언트 */
+.action-bar-gradient {
+  background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.05), transparent);
+}
+
+/* 반응형 유틸리티 */
+@media (max-width: 640px) {
+  .slide-editor-mobile {
+    flex-direction: column;
+  }
+
+  .thumbnail-panel-mobile {
+    width: 100%;
+    height: 120px;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .thumbnail-panel-mobile > * {
+    flex-shrink: 0;
+    width: 100px;
+  }
+}
+
+/* 터치 디바이스 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  .touch-action-pan-y {
+    touch-action: pan-y;
+  }
+
+  .touch-action-pan-x {
+    touch-action: pan-x;
+  }
+
+  /* 터치 디바이스에서는 호버 효과 비활성화 */
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 100;
+  }
+}
+
+/* 다크모드 개선 */
+.dark .slide-canvas {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -2px rgba(0, 0, 0, 0.3),
+    0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+/* 포커스 가시성 개선 */
+.focus-visible-ring:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+}
+
+/* 키보드 네비게이션 힌트 */
+.kbd {
+  @apply px-2 py-1 text-xs font-mono bg-slate-100 dark:bg-slate-700 rounded border border-slate-200 dark:border-slate-600;
+}
+
+/* 로딩 스피너 */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 토스트 알림 */
+.toast-enter {
+  animation: slide-up-fade 200ms ease-out forwards;
+}
+
+.toast-exit {
+  animation: fade-out 150ms ease-in forwards;
+}
+
+/* 모달 배경 흐림 효과 */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* 선택된 슬라이드 강조 */
+.slide-selected {
+  @apply ring-2 ring-primary-500 ring-offset-2;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* 편집 힌트 툴팁 */
+.edit-hint {
+  @apply absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 text-xs bg-slate-800 text-white rounded whitespace-nowrap opacity-0 transition-opacity pointer-events-none;
+}
+
+.group:hover .edit-hint {
+  @apply opacity-100;
+}
+
+/* 테마 색상 프리뷰 원 */
+.theme-color-preview {
+  @apply w-6 h-6 rounded-full shadow-inner ring-2 ring-white dark:ring-slate-600;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.theme-color-preview:hover {
+  @apply scale-110;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+/* 콘텐츠 블록 드래그 앤 드롭 */
+.content-block-draggable {
+  @apply cursor-grab;
+}
+
+.content-block-draggable:active {
+  @apply cursor-grabbing;
+}
+
+.content-block-drag-over {
+  @apply bg-primary-50 dark:bg-primary-900/20 border-2 border-dashed border-primary-500;
+}

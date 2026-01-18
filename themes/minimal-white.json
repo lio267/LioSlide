@@ -1,0 +1,45 @@
+{
+  "id": "minimal-white",
+  "name": "Minimal White",
+  "nameKo": "미니멀 화이트",
+  "description": "Elegant minimalist theme with generous whitespace and refined typography",
+  "descriptionKo": "넉넉한 여백과 세련된 타이포그래피의 우아한 미니멀 테마",
+  "tags": ["미니멀", "깔끔", "심플", "우아한", "모던"],
+  "category": "minimal",
+  "colors": {
+    "primary": "#171717",
+    "primaryDark": "#0A0A0A",
+    "primaryLight": "#404040",
+    "secondary": "#FAFAFA",
+    "accent": "#171717",
+    "background": "#FFFFFF",
+    "backgroundAlt": "#FAFAFA",
+    "text": "#171717",
+    "textSecondary": "#737373",
+    "textLight": "#A3A3A3",
+    "border": "#E5E5E5"
+  },
+  "fonts": {
+    "heading": "Pretendard",
+    "body": "Pretendard",
+    "weights": {
+      "heading": 600,
+      "body": 400
+    }
+  },
+  "spacing": {
+    "margin": 0.6,
+    "padding": 0.3,
+    "gap": 0.25,
+    "radius": 0
+  },
+  "effects": {
+    "shadow": "none",
+    "gradient": "none"
+  },
+  "preview": {
+    "gradient": "from-neutral-50 to-white",
+    "accentColor": "#171717",
+    "style": "minimal"
+  }
+}

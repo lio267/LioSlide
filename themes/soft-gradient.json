@@ -1,0 +1,34 @@
+{
+  "id": "soft-gradient",
+  "name": "Soft Gradient",
+  "nameKo": "소프트 그라데이션",
+  "description": "Soft pastel gradient theme for gentle presentations",
+  "descriptionKo": "부드러운 파스텔 그라데이션 테마",
+  "tags": ["부드러운", "파스텔", "그라데이션"],
+  "category": "gradient",
+  "colors": {
+    "primary": "#7C3AED",
+    "primaryDark": "#6D28D9",
+    "secondary": "#A78BFA",
+    "accent": "#F472B6",
+    "background": "#FAF5FF",
+    "backgroundAlt": "#F3E8FF",
+    "text": "#3B0764",
+    "textSecondary": "#6B21A8",
+    "textLight": "#9333EA"
+  },
+  "fonts": {
+    "heading": "Pretendard",
+    "body": "Pretendard"
+  },
+  "spacing": {
+    "margin": 0.5,
+    "padding": 0.25,
+    "gap": 0.15
+  },
+  "preview": {
+    "gradient": "from-violet-400 via-purple-400 to-pink-400",
+    "accentColor": "#F472B6",
+    "style": "gradient"
+  }
+}

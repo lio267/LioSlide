@@ -1,0 +1,166 @@
+/* Corporate Blue Theme - Modern, Professional, Business-focused */
+
+/* Web Fonts Import */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  /* Typography - Modern Korean-friendly fonts */
+  --font-family-display: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-weight-display: 700;
+  --font-family-content: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 16px;
+  --line-height-content: 1.6;
+
+  /* Surface Colors */
+  --color-surface: #ffffff;
+  --color-surface-foreground: #1e293b;
+
+  /* Primary Colors - Premium Corporate Blue */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary Colors */
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #1e293b;
+
+  /* Utility Colors */
+  --color-muted: #e2e8f0;
+  --color-muted-foreground: #64748b;
+  --color-accent: #f97316;
+  --color-accent-foreground: #ffffff;
+  --color-border: #cbd5e1;
+
+  /* Spacing */
+  --spacing: 0.25rem;
+  --gap: 1rem;
+  --radius: 8px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-content);
+  font-weight: var(--font-weight-content);
+  font-size: var(--font-size-content);
+  line-height: var(--line-height-content);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-display);
+  line-height: 1.2;
+}
+
+/* Layout Utilities */
+.row { display: flex; flex-direction: row; }
+.col { display: flex; flex-direction: column; }
+.center { align-items: center; justify-content: center; }
+.fit { flex: 0 0 auto; }
+.fill-width { flex: 1 1 auto; }
+.fill-height { flex: 1 1 auto; }
+
+/* Gap Utilities */
+.gap-sm { gap: 0.5rem; }
+.gap-md { gap: 1rem; }
+.gap-lg { gap: 1.5rem; }
+.gap-xl { gap: 2rem; }
+
+/* Background Colors */
+.bg-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+.bg-surface { background-color: var(--color-surface); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-muted { background-color: var(--color-muted); }
+
+/* Text Sizes */
+.text-sm { font-size: 14px; }
+.text-base { font-size: 16px; }
+.text-lg { font-size: 18px; }
+.text-xl { font-size: 20px; }
+.text-2xl { font-size: 24px; }
+.text-3xl { font-size: 30px; }
+.text-4xl { font-size: 36px; }
+.text-5xl { font-size: 48px; }
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Placeholder - Chart area styling */
+.placeholder {
+  background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-foreground);
+  font-size: 14px;
+  position: relative;
+}
+
+.placeholder::after {
+  content: '📊 차트 영역';
+  font-size: 16px;
+  color: var(--color-muted-foreground);
+}
+
+/* List styling */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: '▸';
+  color: var(--color-primary);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1.2em;
+}
+
+ul li {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+/* Accent decorations */
+.accent-bar {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+/* Card-like content blocks */
+.content-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+}
+
+/* Quote styling enhancements */
+blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: 24px;
+  margin: 0;
+  font-style: italic;
+}

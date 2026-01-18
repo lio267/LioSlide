@@ -1,0 +1,36 @@
+/* Dark Professional Theme - Premium, Executive, Sophisticated */
+:root {
+  /* Typography - 세련되고 고급스러운 느낌 */
+  --font-family-display: "Inter", "Pretendard", sans-serif;
+  --font-weight-display: 600;
+  --font-family-content: "Pretendard", "Noto Sans KR", sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 16px;
+  --line-height-content: 1.7;
+
+  /* Surface Colors - True Black */
+  --color-surface: #09090b;
+  --color-surface-foreground: #fafafa;
+
+  /* Primary Colors - Pure White */
+  --color-primary: #fafafa;
+  --color-primary-light: #ffffff;
+  --color-primary-dark: #e4e4e7;
+  --color-primary-foreground: #09090b;
+
+  /* Secondary Colors */
+  --color-secondary: #18181b;
+  --color-secondary-foreground: #a1a1aa;
+
+  /* Utility Colors */
+  --color-muted: #27272a;
+  --color-muted-foreground: #71717a;
+  --color-accent: #d4af37;
+  --color-accent-foreground: #09090b;
+  --color-border: #3f3f46;
+
+  /* Spacing - 균형잡힌 여백 */
+  --spacing: 0.3rem;
+  --gap: 1.25rem;
+  --radius: 4px;
+}

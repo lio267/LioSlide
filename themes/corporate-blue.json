@@ -1,0 +1,45 @@
+{
+  "id": "corporate-blue",
+  "name": "Corporate Blue",
+  "nameKo": "비즈니스 블루",
+  "description": "Modern and professional blue theme for impactful business presentations",
+  "descriptionKo": "임팩트 있는 비즈니스 발표를 위한 현대적이고 전문적인 블루 테마",
+  "tags": ["비즈니스", "전문적", "기업", "모던", "프리미엄"],
+  "category": "business",
+  "colors": {
+    "primary": "#2563EB",
+    "primaryDark": "#1D4ED8",
+    "primaryLight": "#3B82F6",
+    "secondary": "#F1F5F9",
+    "accent": "#F97316",
+    "background": "#FFFFFF",
+    "backgroundAlt": "#F8FAFC",
+    "text": "#1E293B",
+    "textSecondary": "#64748B",
+    "textLight": "#94A3B8",
+    "border": "#CBD5E1"
+  },
+  "fonts": {
+    "heading": "Pretendard",
+    "body": "Pretendard",
+    "weights": {
+      "heading": 700,
+      "body": 400
+    }
+  },
+  "spacing": {
+    "margin": 0.5,
+    "padding": 0.25,
+    "gap": 0.15,
+    "radius": 8
+  },
+  "effects": {
+    "shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+    "gradient": "linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)"
+  },
+  "preview": {
+    "gradient": "from-blue-600 to-blue-700",
+    "accentColor": "#F97316",
+    "style": "professional"
+  }
+}
